@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.grupos{
+    background-image: linear-gradient(to bottom, v.$primario 50%, v.$secundario 50%);
+
+    @include m.tablet { 
+        background-image: linear-gradient(to right, v.$primario 50%, v.$secundario 50%);
+    }
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(2, 5rem);
+        }
+    }
+    &__bloque{
+        padding: 5rem 0;
+    }
+    &__heading{
+        margin: 0;
+        color: v.$blanco;
+    }
+    &__texto{
+        color: v.$blanco;
+    }
+}
